@@ -76,7 +76,9 @@ jobs:
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |
-        linux/make
+        cd linux
+        ls
+        make
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
